@@ -1,0 +1,9 @@
+.macy-header-image {
+  background-image: url("/assets/icons/macy_icon.jpg");
+  background-size: cover;
+}
+
+.vip-header-image {
+  background-image: url("/assets/icons/vip-logo.png");
+  background-size: cover;
+}

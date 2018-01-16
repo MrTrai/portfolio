@@ -1,0 +1,16 @@
+<div class="text-center">
+  <div>
+    <button mat-raised-button color="accent" (click)="toggleState()" [@flyInOut]="test">
+      portfolio works!
+    </button>
+  </div>
+  <div>
+    <button mat-raised-button color="primary">Primary</button>
+  </div>
+</div>
+<h1>
+  <nav>
+    <a routerLink="/portfolio/change">Portfolio change</a>
+  </nav>
+</h1>
+<router-outlet></router-outlet>

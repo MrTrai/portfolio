@@ -1,0 +1,29 @@
+<div class="row" style="margin-bottom: 10%; margin-top: 10%; margin-left: 10%;">
+
+  <div class="text-center" style="">
+    <circle-progress
+      [units]="''"
+      [percent]="skill['level'] * 100 / 5"
+      [title]="skill['name']"
+      [subtitle]="skill['mastery']"
+      [titleFontSize]="14"
+      [radius]="40"
+      [outerStrokeWidth]="4"
+      [innerStrokeWidth]="2"
+      [outerStrokeColor]="'#0881c0'"
+      [innerStrokeColor]="'#9ccee5'"
+      [animation]="true"
+      [animationDuration]="400"
+    ></circle-progress>
+
+    <div class="">
+      <button mat-button mat-raised-button>
+        <img [src]="skill['img']['src']" [width]="skill['img']['width']" [height]="skill['img']['height']">
+        <!--<b>-->
+          <!--{{skill['name']}}-->
+        <!--</b>-->
+      </button>
+    </div>
+  </div>
+
+</div>
