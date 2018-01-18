@@ -1,6 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {
@@ -37,6 +36,11 @@ import {
   MatStepperModule,
 } from '@angular/material';
 
+import {RoundProgressModule} from 'angular-svg-round-progressbar';
+import {NgCircleProgressModule} from 'ng-circle-progress';
+import { NgInviewModule } from 'angular-inport';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 import {AppComponent} from './app.component';
 import {PortfolioComponent} from './portfolio/portfolio.component';
 import {BoxInfoComponent} from './common-component/box-info/box-info.component';
@@ -45,11 +49,12 @@ import {TimeLineComponent} from './time-line/time-line.component';
 import {ResumeComponent} from './resume/resume.component';
 import {FrontEndSkillComponent} from './front-end-skill/front-end-skill.component';
 import {BackEndSkillComponent} from './back-end-skill/back-end-skill.component';
-
-import {RoundProgressModule} from 'angular-svg-round-progressbar';
-import {NgCircleProgressModule} from 'ng-circle-progress';
-import { SkillChartComponent } from './skill-chart/skill-chart.component';
-import { DbSkillComponent } from './db-skill/db-skill.component';
+import {SkillChartComponent} from './skill-chart/skill-chart.component';
+import {DbSkillComponent} from './db-skill/db-skill.component';
+import {IntroComponent} from './common-component/intro/intro.component';
+import { TyperComponent } from './common-component/typer/typer.component';
+import { SkillDemoComponent } from './common-component/skill-demo/skill-demo.component';
+import { ImgHightlightDirective } from './directives/img-hightlight.directive';
 
 @NgModule({
   declarations: [
@@ -61,7 +66,11 @@ import { DbSkillComponent } from './db-skill/db-skill.component';
     FrontEndSkillComponent,
     BackEndSkillComponent,
     SkillChartComponent,
-    DbSkillComponent
+    DbSkillComponent,
+    IntroComponent,
+    TyperComponent,
+    SkillDemoComponent,
+    ImgHightlightDirective
   ],
   imports: [
     NgCircleProgressModule.forRoot({
@@ -73,6 +82,8 @@ import { DbSkillComponent } from './db-skill/db-skill.component';
       innerStrokeColor: '#C7E596',
       animationDuration: 300,
     }),
+    PdfViewerModule,
+    NgInviewModule,
     RoundProgressModule,
     BrowserModule,
     BrowserAnimationsModule,

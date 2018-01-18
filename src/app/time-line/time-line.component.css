@@ -7,3 +7,8 @@
   background-image: url("/assets/icons/vip-logo.png");
   background-size: cover;
 }
+
+.hackgt-header-image {
+  background-image: url("/assets/icons/hackgt_icon.jpg");
+  background-size: cover;
+}

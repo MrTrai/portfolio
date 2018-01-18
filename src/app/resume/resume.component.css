@@ -1,0 +1,4 @@
+.resume-background {
+    background: linear-gradient(to bottom, transparent, white),
+      url("/assets/images/resume_img.png");
+}

@@ -1,52 +1,436 @@
-<div [ngStyle]="divStyle">
-  <!--            SIDE NAV            -->
-  <div class="col-md-3" style="height: 100%; padding-right: 40px;">
-    <div class="row"
-         style="height: 100%; width: 100%;
-          box-shadow: lightgrey 2px 2px 2px; padding: 20px;
-          overflow-x: auto">
-      <app-time-line></app-time-line>
-    </div>
-
+<div style="position: fixed; bottom: 10px; right: 30px; z-index: 999">
+  <div class="row">
+    <button mat-fab color="primary" (click)="toTop()">
+      <i class="fa fa-arrow-up"></i>
+    </button>
   </div>
+</div>
+<div class="intro" [ngStyle]="divStyle['intro']">
+  <div class="row" style="height: 100%; width: 100%;">
+    <div class="text-center"
+         style="height: 100%;-webkit-transform: translateY(10%);
+         -moz-transform: translateY(10%);-ms-transform: translateY(10%);
+         -o-transform: translateY(10%);transform: translateY(10%);">
 
-  <div class="col-md-9" style="height: 100%;">
+      <a href="http://www.gatech.edu/" target="_blank">
+        <img class="zoom" src="assets/icons/gt_icon.gif" alt="" style="height: 30%;">
+      </a>
 
-    <!--          TOP HALF            -->
-    <div class="row" style="height: 50%;">
+      <div class="type-wrap" style="font-size: 60px">
+        <span id="typed-name" style="white-space:pre;"></span>
+      </div>
 
-      <!--LEFT-->
-      <div class="col-md-6" style="height: 100%;">
-        <div class="row"
-             style="height: 100%; box-shadow: lightgrey 2px 2px 2px; padding: 20px; background: #f9f9f9;">
-          <app-resume></app-resume>
+      <div class="type-wrap" style="font-size: 50px">
+        <span id="typed-school" style="white-space:pre;"></span>
+      </div>
+      <!--<h4>-->
+      <!--Georgia Institute of Technology-->
+      <!--</h4>-->
+
+      <h5 style="color: #cacaca;">
+        B.S Computer Science
+      </h5>
+
+      <a href="/assets/doc/Trai_Resume.pdf" target="_blank" style="color: #fff;">
+        <i class="fa fa-eye"></i>
+        My Resume
+      </a>
+
+      <div class="row">
+        <div style="padding: 5px;">
+          <a href="mailto:ttran96@gatech.edu" style="color: white;">
+            <i class="fa fa-envelope"></i>
+            ttran96@gatech.edu
+          </a>
+        </div>
+        <div style="padding: 5px;">
+          <a href="https://github.com/MrTrai" target="_blank" style="color: white;">
+            <i class="fa fa-github"></i>
+            https://github.com/MrTrai
+          </a>
+        </div>
+        <div>
+          <a href="https://www.youtube.com/channel/UCIV6dNZ174iuRb-2-O_6s1w" target="_blank">
+            <img class="zoom" src="assets/icons/youtube_icon.png" style="width: 40px; height: 40px; margin: 10px;" alt="">
+          </a>
+          <a href="https://www.linkedin.com/in/trai-tran-a96814143/" target="_blank">
+            <img class="zoom" src="assets/icons/linkedin_icon.png" style="width: 40px; height: 40px; margin: 10px;" alt="">
+          </a>
+          <a href="https://www.facebook.com/trai.tran.1272" target="_blank">
+            <img class="zoom" src="assets/icons/fb_icon.png" style="width: 40px; height: 40px; margin: 10px;" alt="">
+          </a>
         </div>
       </div>
 
-      <!--RIGHT-->
-      <div class="col-md-6" style="height: 100%;">
-        <div class="row" style="height: 100%; box-shadow: lightgrey 2px 2px 2px;">
-          <div class="col-md-4">
-            <app-front-end-skill></app-front-end-skill>
-          </div>
-          <div class="col-md-4">
-            <app-back-end-skill></app-back-end-skill>
-          </div>
-          <div class="col-md-4">
-            <app-db-skill></app-db-skill>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!--          BOTTOM HALF           -->
-    <div class="row" style="height: 50%; box-shadow: lightgrey 2px 2px 2px; margin-top: 10px; overflow: hidden;">
-      <video autoplay muted loop id="myVideo" style="width: 100%;">
-        <source src="assets/video/sea_view.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
     </div>
   </div>
 </div>
 
+<!--<div>-->
+  <!--PDF-->
+  <!--<pdf-viewer [src]="'/assets/doc/Trai_Resume.pdf'"-->
+              <!--[render-text]="true"-->
+              <!--style="display: block;"></pdf-viewer>-->
+<!--</div>-->
+
+<div [ngStyle]="divStyle['about']">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-8">
+        <div style="color: white; margin-top: 10%; font-size: 30px">
+          <div class="type-wrap" style="">
+            <span id="typed-about-me" style="white-space:pre;"></span>
+          </div>
+        </div>
+
+        <!--CONTENT ABOUT-->
+        <div class="row" style="color: white; margin-top: 5%">
+
+          <p>
+            <a href="/assets/doc/Trai_Resume.pdf" target="_blank" style="color: #fff;">
+              <i class="fa fa-eye"></i>
+              My Resume
+            </a>
+          </p>
+
+          <p>
+            Hi! I'm Trai Tran.
+          </p>
+          <p>
+            Growing up with a passion in tinkering computer, I have decided to take Computer Science as my major.
+            And it turns out that's a right choice.
+          </p>
+          <p>
+            Besides coding, my hobbies are playing piano and guitar :D
+          </p>
+          <p>
+            I also love hiking and traveling around!
+            <br>
+            Also I'm quite talkative and energetic :)
+          </p>
+
+          <p style="margin-top: 10%">
+            Roses are red
+            <br>
+            Violets are blue
+            <br>
+            If you want to know me
+            <br>
+            Then no one can stop you
+            <i class="fa fa-arrow-down bounce"></i>
+          </p>
+
+          <p>Weeeee!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="prof-exp" [ngStyle]="divStyle['gap']">
+  <div class="text-center"
+       style="position: relative; top: 30%;">
+    <span style="color: white; font-size: 50px;">
+      <div class="type-wrap" style="">
+        <span id="typed-exp" style="white-space:pre;"></span>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div [ngStyle]="divStyle['experience']">
+  <div class="container">
+    <div class="row">
+      <div class="row" style="margin-top: 30px">
+        <div class="col-md-4">
+          <img src="assets/icons/macy_icon.jpg" alt="" style="width: 100px; float: right;">
+        </div>
+        <div class="col-md-8">
+
+          <h2>
+            <b>
+              Macy's Techonology
+            </b>
+          </h2>
+
+          <h4 style="color: grey;">
+            Software Developer (January 2017 - Current)
+          </h4>
+
+        </div>
+      </div>
+
+      <div class="row" style="margin-bottom: 20px">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+          <div style="border-left: 5px solid #a7ff81; padding: 10px;">
+            <h4>
+              <b>
+                Predictive Analytic
+              </b>
+            </h4>
+
+            <div>
+              Developed application that helps Macy's predicting their future sales and system health in order to
+              respond to emergency
+              events.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-bottom: 20px">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+          <div style="border-left: 5px solid #7277ff; padding: 10px;">
+            <h4>
+              <b>
+                Anomaly Detection
+              </b>
+            </h4>
+
+            <div>
+              Built application that detects anomalous signal from Macy's system of thousands of servers and alert as
+              soon as possible so support teams can take appropriate measures.
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row" style="margin-bottom: 20px">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+          <div style="border-left: 5px solid #eb49ff; padding: 10px;">
+            <h4>
+              <b>
+                Capacity Planning
+              </b>
+            </h4>
+
+            <div>
+              Developed tool that helping Macy's to appropriate plan their order capacity for big holiday events such as
+              Black Friday, Cyber Monday
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row" style="margin-bottom: 20px">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+          <div style="border-left: 5px solid #d18654; padding: 10px;">
+            <h4>
+              <b>
+                Holistic View
+              </b>
+            </h4>
+
+            <div>
+              Developed a monitoring tool that help to monitor Macy's system data traffic flow as a whole and flag
+              issues when detected.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="expertise" [ngStyle]="divStyle['gap']">
+  <div class="text-center"
+       style="position: relative; top: 30%;">
+    <span style="color: white; font-size: 50px;">
+      <div class="type-wrap" style="">
+        <span id="typed-skills" style="white-space:pre;"></span>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div [ngStyle]="divStyle['skills']">
+  <div class="container" style="height: 100%; color: white;">
+    <div class="row" style="height: 100%;">
+      <div class="col-md-4" *ngFor="let techKey of objectKeys(techList)" style="height: 100%;">
+        <h3 class="text-center">
+          {{techKey}}
+        </h3>
+        <div class="row" *ngFor="let tech of techList[techKey]" style="height: 50%; position: relative;">
+          <div class="" style="height: 100%;">
+            <img class="zoom" [src]="tech['img']" [ngStyle]="tech['imgStyle']" alt="">
+
+            <div style="position: absolute; bottom: 20%; left: 15%; width: 70%;">
+              <mat-progress-bar
+                [color]="'primary'"
+                [mode]="'determinate'"
+                [value]="tech['value']">
+              </mat-progress-bar>
+
+              <h5 class="text-center" [ngStyle]="tech['textStyle']">
+                {{tech['level']}} in {{tech['name']}}
+              </h5>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project" [ngStyle]="divStyle['gap']">
+  <div class="text-center"
+       style="position: relative; top: 30%;">
+    <span style="color: white; font-size: 50px;">
+      <div class="type-wrap" style="">
+        <span id="typed-projects" style="white-space:pre;"></span>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div [ngStyle]="divStyle['projects']">
+  <div class="container">
+    <div class="row" style="margin-top: 30px">
+      <div class="col-md-4">
+        <img src="assets/icons/bb_icon.svg" alt="" style="width: 100px; float: right;">
+      </div>
+      <div class="col-md-8">
+
+        <h3>
+          <b>
+            Best Bargains
+          </b>
+        </h3>
+
+        <h5 style="color: grey;">
+          Front End Developer (April 2017 - July 2017)
+        </h5>
+
+        <div style="border-left: thick solid black; padding-left: 5px">
+          <div>
+            URL: <a href="https://best.bargains/" target="_blank"> best.bargains </a>
+          </div>
+
+          <p>
+            Worked with Software Engineers from Macy's and Qualcomm for a start up
+            application that brings to customer a platform that offer the best prices from major vendors
+            like Amazon, Best Buys, Walmart...
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row" style="margin-top: 30px">
+      <div class="col-md-4">
+        <img src="assets/icons/vip-logo.png" alt="" style="width: 100px; float: right;">
+      </div>
+      <div class="col-md-8">
+
+        <h3>
+          <b>
+            Vertically Integrated Program
+          </b>
+        </h3>
+
+        <h5 style="color: grey;">
+          Embedded Vision System
+        </h5>
+
+        <div style="border-left: thick solid black; padding-left: 5px">
+          <p>
+              The project is funded by Ga Tech and corporations such as AT&T in order
+            to build a device that utilizes Computer Vision to detect pedestrians and other activites.
+            The device is aimed to enhance the idea of a smart city.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 30px">
+      <div class="col-md-4">
+        <img src="assets/icons/hackgt_icon.png" alt="" style="width: 100px; float: right;">
+      </div>
+      <div class="col-md-8">
+
+        <h3>
+          <b>
+            Hack GT
+          </b>
+        </h3>
+
+        <h5 style="color: grey;">
+          Fall 2017
+        </h5>
+
+        <div style="border-left: thick solid black; padding-left: 5px">
+          <p>
+             Built an application that allows everyone to have quick access to the nearest medical facilities with good price.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 30px">
+      <div class="col-md-4">
+        <img src="assets/icons/hackgsu_icon.jpg" alt="" style="width: 100px; float: right;">
+      </div>
+      <div class="col-md-8">
+
+        <h3>
+          <b>
+            Hack GSU
+          </b>
+        </h3>
+
+        <h5 style="color: grey;">
+          Spring 2017
+        </h5>
+
+        <div style="border-left: thick solid black; padding-left: 5px">
+          <div>
+            URL: <a href="https://github.com/MrTrai/Pulsify" target="_blank"> Pulsify </a>
+          </div>
+
+          <p>
+            An application that allows users to search and play songs using voice activate through phones
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row" style="margin-top: 30px">
+      <div class="col-md-4">
+        <img src="assets/icons/hackatl_icon.png" alt="" style="width: 100px; float: right;">
+      </div>
+      <div class="col-md-8">
+
+        <h3>
+          <b>
+            Hack ATL
+          </b>
+        </h3>
+
+        <h5 style="color: grey;">
+          Spring 2017
+        </h5>
+
+        <div style="border-left: thick solid black; padding-left: 5px">
+          <div>
+            URL: <a href="https://github.com/MrTrai/Applications/tree/master/Stor_iOS" target="_blank"> STOR </a>
+          </div>
+
+          <p>
+              An application that offers a platform to cheap and quick delivery through mobile app
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
